@@ -43,8 +43,7 @@ class PokemonListActivity : AppCompatActivity() {
                 } catch (e: Exception) {
                     null
                 }
-
-                if (pokemon != null && pokemon.pkmn != null) {
+                if (pokemon != null) {
                     customAdapter = CustomAdapter(pokemon.pkmn.toMutableList())
                     recyclerView.adapter = customAdapter
                 } else {
@@ -64,6 +63,7 @@ class PokemonListActivity : AppCompatActivity() {
                 customAdapter?.filter?.filter(newText)
                 return true
             }
-        })
+        }
+        )
     }
 }
