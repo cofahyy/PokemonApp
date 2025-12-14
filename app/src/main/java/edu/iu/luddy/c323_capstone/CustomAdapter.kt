@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class CustomAdapter (private val dataSet: List<Results>) :
+class CustomAdapter (private val dataSet : List<Results>) :
     RecyclerView.Adapter<CustomAdapter.ViewHolder>(){
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -21,7 +21,9 @@ class CustomAdapter (private val dataSet: List<Results>) :
         holder: ViewHolder,
         position: Int
     ) {
-        holder.titleView.text = dataSet[position].toString()
+        holder.titleView.text = dataSet[position].name.replaceFirstChar {
+            if (it.isLowerCase()) it.titlecase() else it.toString()
+        }
     }
 
     override fun getItemCount(): Int {

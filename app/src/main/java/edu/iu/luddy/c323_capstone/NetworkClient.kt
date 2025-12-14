@@ -5,13 +5,16 @@ import org.chromium.net.CronetEngine
 import org.chromium.net.CronetException
 import org.chromium.net.UrlRequest
 import org.chromium.net.UrlResponseInfo
+import java.io.ByteArrayOutputStream
 import java.nio.ByteBuffer
+import java.nio.channels.Channels
 import java.util.concurrent.Executor
 
-// provides the get for the API
 class NetworkClient(private val cronetEngine: CronetEngine, private val ex: Executor) {
     fun get(url: String, callback: (String?) -> Unit) {
         val requestBuilder = cronetEngine.newUrlRequestBuilder(url, object : UrlRequest.Callback() {
+            private val bytesReceived = ByteArrayOutputStream()
+            private val receiveChannel = Channels.newChannel(bytesReceived)
 
             override fun onRedirectReceived(
                 request: UrlRequest?,
@@ -33,21 +36,23 @@ class NetworkClient(private val cronetEngine: CronetEngine, private val ex: Exec
                 info: UrlResponseInfo?,
                 byteBuffer: ByteBuffer?
             ) {
+                byteBuffer?.flip()
+
+                try {
+                    receiveChannel.write(byteBuffer)
+                } catch (e: Exception) {
+                    Log.e("NetworkClient", "Error writing to stream", e)
+                }
                 byteBuffer?.clear()
                 request?.read(byteBuffer)
-                val byteArray = byteBuffer?.let { ByteArray(it.remaining()) }
-                if (byteArray != null) {
-                    byteBuffer.get(byteArray)
-                }
-                val response = byteArray?.toString(Charsets.UTF_8)
-                callback(response)
             }
 
             override fun onSucceeded(
                 request: UrlRequest?,
                 info: UrlResponseInfo?
             ) {
-                Log.i("TAG", "onSucceeded method called.")
+                val response = bytesReceived.toString(Charsets.UTF_8.name())
+                callback(response)
             }
 
             override fun onFailed(
@@ -59,6 +64,7 @@ class NetworkClient(private val cronetEngine: CronetEngine, private val ex: Exec
                 callback(null)
             }
         }, ex)
+
         requestBuilder.build().start()
     }
 }

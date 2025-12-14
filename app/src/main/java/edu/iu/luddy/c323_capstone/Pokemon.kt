@@ -7,5 +7,6 @@ data class Pokemon(
 )
 
 data class Results (
-    @SerializedName("name") val name : String
+    @SerializedName("name") val name : String,
+    @SerializedName("url") val url : String
 )
