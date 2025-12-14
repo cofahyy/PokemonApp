@@ -48,4 +48,5 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("com.google.android.gms:play-services-cronet:18.0.1")
     implementation("com.google.code.gson:gson:2.11.0")
+    implementation("io.coil-kt:coil:2.4.0")
 }
