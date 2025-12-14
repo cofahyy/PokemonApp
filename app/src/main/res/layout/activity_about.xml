@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:gravity="center"
-        android:text="This is a Pokémon app created for C323."
+        android:text="This is a Pokémon app created for C323 by Corinna Barts and Connor Fahy. The Pokémon App is designed for users who want quick access to Pokémon data and simple team-building tools."
         android:textColor="@android:color/white"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/ivAboutImage"

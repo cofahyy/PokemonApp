@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <!-- The fire gradient background -->
     <item android:drawable="@drawable/fire_gradient_background" />
 
     <!-- WALL OF FIRE - Widest, most background flames -->
@@ -121,7 +119,6 @@
         </vector>
     </item>
     
-    <!-- NEW Small Foreground Flames -->
     <item
         android:width="60dp"
         android:height="90dp"

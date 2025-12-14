@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <!-- The grass gradient background -->
     <item android:drawable="@drawable/grass_gradient_background" />
 
     <!-- Even More Dark Background Blades -->
@@ -146,7 +144,6 @@
         </vector>
     </item>
     
-    <!-- Front layer of grass (lighter) -->
     <item
         android:width="60dp"
         android:height="110dp"
@@ -178,7 +175,6 @@
         </vector>
     </item>
 
-    <!-- NEW Smallest Foreground Blades -->
     <item
         android:width="30dp"
         android:height="60dp"
