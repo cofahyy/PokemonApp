@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- The gradient background -->
+    <item android:drawable="@drawable/gradient_background" />
+
+    <!-- Bubbles with correct gravity -->
+
+    <!-- Large bubbles starting from the bottom -->
+    <item
+        android:width="80dp"
+        android:height="80dp"
+        android:gravity="bottom|left"
+        android:left="30dp"
+        android:bottom="-40dp">
+        <shape android:shape="oval">
+            <solid android:color="#33FFFFFF" />
+        </shape>
+    </item>
+    <item
+        android:width="100dp"
+        android:height="100dp"
+        android:gravity="bottom|right"
+        android:right="20dp"
+        android:bottom="-50dp">
+        <shape android:shape="oval">
+            <solid android:color="#22FFFFFF" />
+            <stroke android:width="1dp" android:color="#4DFFFFFF" />
+        </shape>
+    </item>
+
+    <!-- Medium bubbles floating up -->
+    <item
+        android:width="50dp"
+        android:height="50dp"
+        android:gravity="bottom|left"
+        android:left="80dp"
+        android:bottom="120dp">
+        <shape android:shape="oval">
+            <solid android:color="#30FFFFFF" />
+        </shape>
+    </item>
+    <item
+        android:width="60dp"
+        android:height="60dp"
+        android:gravity="bottom|right"
+        android:right="60dp"
+        android:bottom="200dp">
+        <shape android:shape="oval">
+            <stroke android:width="2dp" android:color="#4DFFFFFF" />
+        </shape>
+    </item>
+    <item
+        android:width="40dp"
+        android:height="40dp"
+        android:gravity="bottom|left"
+        android:left="20dp"
+        android:bottom="280dp">
+        <shape android:shape="oval">
+            <solid android:color="#33FFFFFF" />
+        </shape>
+    </item>
+    
+    <!-- Small bubbles near the top -->
+     <item
+        android:width="25dp"
+        android:height="25dp"
+        android:gravity="bottom|right"
+        android:right="120dp"
+        android:bottom="350dp">
+        <shape android:shape="oval">
+            <solid android:color="#4DFFFFFF" />
+        </shape>
+    </item>
+     <item
+        android:width="20dp"
+        android:height="20dp"
+        android:gravity="bottom|left"
+        android:left="50dp"
+        android:bottom="450dp">
+        <shape android:shape="oval">
+            <stroke android:width="1dp" android:color="#66FFFFFF" />
+        </shape>
+    </item>
+     <item
+        android:width="30dp"
+        android:height="30dp"
+        android:gravity="bottom|right"
+        android:right="90dp"
+        android:bottom="520dp">
+        <shape android:shape="oval">
+            <solid android:color="#40FFFFFF" />
+        </shape>
+    </item>
+     <item
+        android:width="15dp"
+        android:height="15dp"
+        android:gravity="bottom|left"
+        android:left="140dp"
+        android:bottom="580dp">
+        <shape android:shape="oval">
+            <solid android:color="#66FFFFFF" />
+        </shape>
+    </item>
+
+    <!-- More small bubbles -->
+    <item
+        android:width="18dp"
+        android:height="18dp"
+        android:gravity="bottom|right"
+        android:right="40dp"
+        android:bottom="480dp">
+        <shape android:shape="oval">
+            <solid android:color="#55FFFFFF" />
+        </shape>
+    </item>
+    <item
+        android:width="12dp"
+        android:height="12dp"
+        android:gravity="bottom|left"
+        android:left="180dp"
+        android:bottom="380dp">
+        <shape android:shape="oval">
+            <solid android:color="#77FFFFFF" />
+        </shape>
+    </item>
+    <item
+        android:width="22dp"
+        android:height="22dp"
+        android:gravity="bottom|left"
+        android:left="10dp"
+        android:bottom="400dp">
+        <shape android:shape="oval">
+            <stroke android:width="1dp" android:color="#55FFFFFF" />
+        </shape>
+    </item>
+    <item
+        android:width="16dp"
+        android:height="16dp"
+        android:gravity="bottom|right"
+        android:right="150dp"
+        android:bottom="620dp">
+        <shape android:shape="oval">
+            <solid android:color="#66FFFFFF" />
+        </shape>
+    </item>
+
+</layer-list>

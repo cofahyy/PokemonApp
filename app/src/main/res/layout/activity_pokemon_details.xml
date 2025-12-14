@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/grass_background_with_blades"
+    android:gravity="center_horizontal">
 
     <ImageView
         android:id="@+id/ivPokemonImage"
@@ -16,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Pokemon Name"
+        android:textColor="@android:color/white"
         android:textSize="24sp" />
 
     <TextView
@@ -24,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Pokemon Type"
+        android:textColor="@android:color/white"
         android:textSize="18sp" />
 
     <TextView
@@ -32,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Pokemon Stats"
+        android:textColor="@android:color/white"
         android:textSize="18sp" />
 
     <Button
@@ -40,6 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:backgroundTint="#689F38"
         android:text="Back" />
 
 </LinearLayout>
