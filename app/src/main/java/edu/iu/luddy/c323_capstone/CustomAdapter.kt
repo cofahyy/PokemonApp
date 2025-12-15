@@ -18,7 +18,8 @@ import java.util.Locale
 
 class CustomAdapter(
     private val fullDataSet: MutableList<Results>,
-    private val isTeamView: Boolean = false
+    private val isTeamView: Boolean = false,
+    private val onItemClicked: (Results) -> Unit
 ) : RecyclerView.Adapter<CustomAdapter.ViewHolder>(), Filterable {
 
     private var filteredDataSet: MutableList<Results> = fullDataSet
@@ -38,7 +39,7 @@ class CustomAdapter(
 
         val pokeNumber = pokemonResult.url.replace(Regex("[^0-9]"), "")
         val rpokeN = pokeNumber.drop(1)
-        val imgUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/$rpokeN.png"
+        val imgUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/$rpokeN.png"
         holder.sprite.load(imgUrl)
 
         if (!isTeamView) {
@@ -116,9 +117,17 @@ class CustomAdapter(
         return filteredDataSet.size
     }
 
-    class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
+    inner class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
         val titleView: TextView = itemView.findViewById(R.id.textView)
         val sprite: ImageView = itemView.findViewById(R.id.imageView2)
         val addButton: ImageButton = view.findViewById(R.id.btnAddButton)
+        init {
+            itemView.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    onItemClicked(filteredDataSet[position])
+                }
+            }
+        }
     }
 }
