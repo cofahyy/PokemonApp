@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pokemon_facts">
+        <item>The term "Pokémon" is short for "Pocket Monsters" in Japanese.</item>
+        <item>Early script drafts of the film show that the character of Detective Pikachu was originally planned to be a Dewott.</item>
+        <item>When creating the species, Atsuko Nishida was told to make a creature that was cute, yellow, and had electricity powers.</item>
+        <item>In the first few seconds of the Japanese Pokémon opening, \'Mezase Pokémon Masutā\', a Clefairy is seen following Ash, with a Pikachu walking behind it.</item>
+        <item>Pikachu\'s design was based on a squirrel, not a mouse as commonly believed.</item>
+        <item>Bulbasaur\'s design is a blend of a dinosaur and a plant, symbolizing the game\'s theme of harmony between nature and creatures.</item>
+        <item>Teachers have used Pokémon to teach subjects like math, reading, and social skills, utilizing its popularity to engage students.</item>
+        <item>Some Pokémon trading cards are extremely rare and can sell for thousands of dollars at auctions.</item>
+        <item>Weedle is the only Pokémon that can\'t learn normal-type moves.</item>
+        <item>The patterns on Arbok\'s chest vary depending on which region it\'s from.</item>
+        <item>Meowth is the only Pokémon with more than one regional form.</item>
+        <item>Despite not being a legendary Pokémon, Arcanine still bears the title of one.</item>
+    </string-array>
+</resources>

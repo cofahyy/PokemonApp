@@ -11,7 +11,7 @@
         android:id="@+id/tvMyTeamTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="50dp"
         android:text="My Team"
         android:textColor="@android:color/white"
         android:textSize="34sp"
